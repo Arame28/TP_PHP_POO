@@ -19,7 +19,7 @@ class BDD{
         "mysql:host=$host;dbname=$dbname;charset=utf8",
         $username,
         $password,
-        [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING]
       );
 
       return $bdd;

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $headTitle ?? "Blog Voyage" ?></title>
   <link rel="stylesheet" href="<?= "/sources/css/style.css?v=" . filemtime(ROOT . "/sources/css/style.css") ?>">
+  <link rel="stylesheet" href="/sources/css/machine.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
     <nav class="main-nav">
       <ul class="main-nav-links">
-        <li><a href="/">Accueil</a></li>
+        <li><a href="/">Jouer</a></li>
         <li><a href="/articles">Nos articles</a></li>
         <li><a href="/articles/1">Article 1</a></li>
         <li><a href="/contact">Contact</a></li>
@@ -34,11 +35,11 @@
   </header>
 
   <main class="main-content">
-    <?= $mainContent ?? "Erreur 404" ?>
+     <?= $mainContent ?? "Erreur 404" ?>
   </main>
 
   <footer class="main-foot">
-    <p class="copyright">© Webdevoo - 2024</p>
+    <p class="copyright"></p>
   </footer>
 
   <script src="<?= "/sources/js/burger.js?v=" . filemtime(ROOT."/sources/js/burger.js") ?>"></script>

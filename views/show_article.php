@@ -5,6 +5,7 @@
   }
 
   $headTitle = $article->title;
+  ob_start();
 ?>
 
 <section class="main-sections">

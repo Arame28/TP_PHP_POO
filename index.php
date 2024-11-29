@@ -28,6 +28,7 @@ use Models\Article;
 use Controllers\ErrorsController;
 use Controllers\ArticlesController;
 use Controllers\BlogController;
+use Controllers\SlotMachineController;
 
 $article = new Article(BDD::connect());
 
@@ -97,5 +98,14 @@ switch (true) {
     ErrorsController::launchError(404);
     break;
 }
+
+
+// Définir les routes
+$router->addRoute('GET', '/slot-machine', SlotMachineController::class, 'index');
+$router->addRoute('GET', '/play', SlotMachineController::class, 'play');
+
+// Détecter la requête et dispatcher
+$router->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
+
 
 $router->run();
